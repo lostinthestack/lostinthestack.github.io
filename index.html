@@ -1,125 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>~</title>
+		<title>C'mon... do something...</title>
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" style="text/css" href="general.css" />
 	</head>
 
 	<body>
-		<div class="main">
-			<header>
-				<img src="lost.svg" width="300" />
-				<h1>Hello, <span class="flair">lost</span></h1>
-				<!--Live clock script-->
-				<div class="time" id="time">
-					<script>
-						//document.getElementById("main").innerHTML = Date();
-						function updateClock() {
-							var days = [
-								"SUNDAY",
-								"MONDAY",
-								"TUESDAY",
-								"WEDNESDAY",
-								"THURSDAY",
-								"FRIDAY",
-								"SATURDAY",
-							];
-							var m = new Date();
-							var dateString =
-								days[
-									m.getDay()
-								] +
-								" " +
-								(
-									"0" +
-									m.getDate()
-								).slice(-2) +
-								"-" +
-								(
-									"0" +
-									(m.getMonth() +
-										1)
-								).slice(-2) +
-								"-" +
-								m.getFullYear() +
-								" " +
-								(
-									"0" +
-									m.getHours()
-								).slice(-2) +
-								":" +
-								(
-									"0" +
-									m.getMinutes()
-								).slice(-2) +
-								":" +
-								(
-									"0" +
-									m.getSeconds()
-								).slice(-2);
-
-							// set the content of the element with the ID time to the formatted string
-							document.getElementById(
-								"time"
-							).innerHTML = dateString;
-
-							// call this function again in 1000ms
-							setTimeout(
-								updateClock,
-								1000
-							);
-						}
-						updateClock(); // initial call
-					</script>
-				</div>
-			</header>
-
-			<nav>
-				<ul>
-					<a>Dev</a>
-					<li>
-						<span class="unicode"></span>
-						<a
-							href="https://gitlab.com/lostinthestack"
-							>Gitlab</a
-						>
-					</li>
-				</ul>
-
-				<ul>
-					<a>Entertainment</a>
-					<li>
-						<span class="unicode"></span>
-						<a
-							href="https://www.youtube.com/"
-							>Youtube</a
-						>
-					</li>
-					<li>
-						<span class="unicode"></span>
-						<a
-							href="https://www.reddit.com/"
-							>Reddit</a
-						>
-					</li>
-				</ul>
-
-				<ul>
-					<a>Comms</a>
-					<li>
-						<span class="unicode"></span>
-						<a href="https://gmail.com"
-							>Mail</a
-						>
-					</li>
-				</ul>
-			</nav>
-		</div>
+		<header>
+			<img src="lost.svg" width="300" />
+			<h1>Hello, <span class="highlight">lost</span></h1>
+		</header>
+		<table>
+			<th>Development</th>
+			<th>Entertainment</th>
+			<th>Communications</th>
+			<tr>
+				<td>
+					<span class="highlight"></span>
+					<a
+						href="https://gitlab.com/lostinthestack"
+					/>GitLab
+				</td>
+				<td>
+					<span class="highlight"></span>
+					<a href="https://youtube.com" />YouTube
+				</td>
+				<td>
+					<span class="highlight"></span>
+					<a href="https://gmail.com" />GMail
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="highlight"></span>
+					<a
+						href="https://github.com/lostinthestack"
+					/>GitHub
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
 	</body>
 </html>
