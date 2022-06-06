@@ -1,4 +1,4 @@
-@font-fece {
+@font-face {
 	font-family: "Victor Mono Nerd Font";
 	src: url("Victor.ttf");
 }
@@ -13,20 +13,22 @@
 	--black6: #282c34;
 	--black1: #393b44;
 	--black2: #575860;
+	--white1: #dfdfe0;
+	--white2: #e4e4e5;
 	--red1: #c94f6d;
 	--red2: #d16983;
-	--green1: #81b29a;
-	--green2: #8ebaa4;
+	--orange1: #e6873c;
+	--orange2: #eb9c60;
 	--yellow1: #dbc074;
 	--yellow2: #e0c989;
+	--green1: #81b29a;
+	--green2: #8ebaa4;
+	--cyan1: #63cdcf;
+	--cyan2: #7ad4d6;
 	--blue1: #719cd6;
 	--blue2: #86abdc;
 	--magenta1: #9d79d6;
 	--magenta2: #baa1e2;
-	--cyan1: #63cdcf;
-	--cyan2: #7ad4d6;
-	--white1: #dfdfe0;
-	--white2: #e4e4e5;
 }
 
 a,
@@ -43,7 +45,7 @@ html {
 
 body {
 	font-family: "Victor", monospace;
-	font-size: 1.8em;
+	font-size: 1.4em;
 	background-color: var(--bg);
 	color: var(--fg);
 	width: 90vw;
@@ -57,10 +59,15 @@ body {
 }
 
 .clock {
-		position: absolute;
-		bottom: 0px;
-		text-align: center;
-		width: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+footer {
+		bottom: 0;
+		margin: auto;
+		position: fixed;
+		width: 90%;
 }
 
 h1 {
