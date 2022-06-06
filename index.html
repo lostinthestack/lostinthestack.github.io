@@ -8,39 +8,79 @@
 
 	<body>
 		<header>
-			<img src="lost.svg" width="300" />
+			<div class="image">
+				<img src="lost.svg" width="300" />
+			</div>
 			<h1>Hello, <span class="highlight">lost</span></h1>
 		</header>
-		<table>
-			<th>Development</th>
-			<th>Entertainment</th>
-			<th>Communications</th>
-			<tr>
-				<td>
-					<span class="highlight"></span>
-					<a
-						href="https://gitlab.com/lostinthestack"
-					/>GitLab
-				</td>
-				<td>
-					<span class="highlight"></span>
-					<a href="https://youtube.com" />YouTube
-				</td>
-				<td>
-					<span class="highlight"></span>
-					<a href="https://gmail.com" />GMail
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<span class="highlight"></span>
-					<a
-						href="https://github.com/lostinthestack"
-					/>GitHub
-				</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
+		<div class="table">
+			<table>
+				<th>Development</th>
+				<th>Entertainment</th>
+				<th>Communications</th>
+				<tr>
+					<td>
+						<span class="highlight"></span>
+						<a
+							href="https://gitlab.com/lostinthestack"
+						/>GitLab
+					</td>
+					<td>
+						<span class="highlight"></span>
+						<a
+							href="https://youtube.com"
+						/>YouTube
+					</td>
+					<td>
+						<span class="highlight"></span>
+						<a
+							href="https://gmail.com"
+						/>GMail
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="highlight"></span>
+						<a
+							href="https://github.com/lostinthestack"
+						/>GitHub
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<footer>
+			<div class="clock" id="clock" onload="currentTime()"></div>
+		</footer>
 	</body>
+	<script type="text/javascript">
+		function currentTime() {
+			let date = new Date();
+			let hh = date.getHours();
+			let mm = date.getMinutes();
+			let ss = date.getSeconds();
+			let session = "AM";
+
+			if (hh == 0) {
+				hh = 12;
+			}
+			if (hh > 12) {
+				hh = hh - 12;
+				session = "PM";
+			}
+
+			hh = hh < 10 ? "0" + hh : hh;
+			mm = mm < 10 ? "0" + mm : mm;
+			ss = ss < 10 ? "0" + ss : ss;
+
+			let time = hh + ":" + mm + ":" + ss + " " + session;
+
+			document.getElementById("clock").innerText = time;
+			let t = setTimeout(function () {
+				currentTime();
+			}, 1000);
+		}
+		currentTime();
+	</script>
 </html>
