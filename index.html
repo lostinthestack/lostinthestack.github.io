@@ -3,128 +3,301 @@
 	<head>
 		<title>C'mon... do something...</title>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" style="text/css" href="general.css" />
+		<!--link rel="stylesheet" style="text/css" href="general.css" /-->
 	</head>
+	<style>
+		@font-face {
+			font-family: "VictorMono Nerd Font";
+			src: url("VictorMono.ttf");
+		}
+		* {
+			--bg: #192330;
+			--bg2: #212f40;
+			--bg3: #2a3b50;
+			--fg: #cdcecf;
+			--transparent: #00000000;
+			--black1: #14141e;
+			--black2: #1d1d2b;
+			--black3: #212130;
+			--black4: #282c34;
+			--black5: #393b44;
+			--black6: #575860;
+			--white1: #dfdfe0;
+			--white2: #e4e4e5;
+			--red1: #c94f6d;
+			--red2: #d16983;
+			--orange1: #e6873c;
+			--orange2: #eb9c60;
+			--yellow1: #dbc074;
+			--yellow2: #e0c989;
+			--green1: #81b29a;
+			--green2: #8ebaa4;
+			--cyan1: #63cdcf;
+			--cyan2: #7ad4d6;
+			--blue1: #719cd6;
+			--blue2: #86abdc;
+			--magenta1: #9d79d6;
+			--magenta2: #baa1e2;
+		}
 
+		a,
+		a:link,
+		a:visited {
+			text-decoration: none;
+			color: var(--cyan1) !important;
+		}
+
+		html {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			font-family: "VictorMono Nerd Font";
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 90vw;
+			height: 90vh;
+			font-size: 20px;
+		}
+
+		.body {
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+			width: 90vw;
+			height: 90vh;
+			background-color: var(--black1);
+			border: 0px solid #00000000;
+			border-radius: 36px;
+			box-shadow: 20px 20px 4px var(--bg);
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 0.4em;
+		}
+
+		.item {
+			display: flex;
+			flex-direction: row;
+			justify-content: start;
+			align-items: center;
+			gap: 0.4em;
+			padding-left: 0.8em;
+		}
+
+		.col {
+			display: flex;
+			flex-direction: column;
+			background-color: var(--bg);
+			border: 0px solid var(--transparent);
+			border-radius: 8px 8px 8px 8px;
+			line-height: 3em;
+		}
+
+		.header {
+			background-color: var(--bg2);
+			border: 0px solid var(--transparent);
+			border-radius: 8px 8px 0 0;
+			padding: 10px;
+			text-align: center;
+			line-height: 2em;
+		}
+
+		.clock {
+			background-color: var(--bg2);
+			color: var(--cyan1);
+			border: 0px solid var(--transparent);
+			border-radius: 8px;
+			padding: 0.6em;
+			text-align: center;
+			font-weight: bold;
+			position: absolute;
+			bottom: 6%;
+			box-shadow: 10px 10px 3px var(--bg) inset;
+			text-shadow: 10px 10px 3px var(--black1);
+		}
+
+		footer {
+		}
+
+		.unicode {
+			font-size: 3em;
+		}
+
+		.lost {
+			color: var(--magenta1);
+			text-shadow: 0px 0px 3px var(--cyan1);
+		}
+
+		.red1 {
+			color: var(--red1);
+		}
+		.red2 {
+			color: var(--red2);
+		}
+		.orange1 {
+			color: var(--orange1);
+		}
+		.orange2 {
+			color: var(--orange2);
+		}
+		.yellow1 {
+			color: var(--yellow1);
+		}
+		.yellow2 {
+			color: var(--yellow2);
+		}
+		.green1 {
+			color: var(--green1);
+		}
+		.green2 {
+			color: var(--green2);
+		}
+		.cyan1 {
+			color: var(--cyan1);
+		}
+		.cyan2 {
+			color: var(--cyan2);
+		}
+		.blue1 {
+			color: var(--blue1);
+		}
+		.blue2 {
+			color: var(--blue2);
+		}
+		.magenta1 {
+			color: var(--magenta1);
+		}
+		.magenta2 {
+			color: var(--magenta2);
+		}
+	</style>
 	<body>
-		<header>
-			<div class="image">
-				<img src="lost.svg" width="300" />
-			</div>
-			<h1>Hello, <span class="highlight">lost</span></h1>
-		</header>
-		<div class="table">
-			<table>
-				<th><span class="unicode highlight"> </span>Development</th>
-				<th><span class="unicode highlight">ﳨ </span>Rice</th>
-				<th><span class="unicode highlight"> </span>Communications</th>
-				<th><span class="unicode highlight"> </span>Entertainment</th>
-				<tr>
-					<td>
-						<span
-							class="unicode"
-							id="gitlab"
-							></span
+		<div class="body">
+			<div class="container">
+				<div>
+					<img
+						style="width: 14em"
+						src="lost.svg"
+					/>
+				</div>
+				<h2>
+					Where to...
+					<span class="lost">lost</span>?
+				</h2>
+				<div class="row">
+					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Development</span
 						>
-						<a
-							href="https://gitlab.com/lostinthestack"
-						/>GitLab
-					</td>
-					<td>
-						<span
-							class="unicode"
-							id="wallhaven"
-							>
-						</span>
-						<a
-							href="https://wallhaven.cc"
-						/>WalllHaven
-					</td>
-					<td>
-						<span class="unicode" id="gmail"
-							>
-						</span>
-						<a
-							href="https://gmail.com"
-						/>GMail
-					</td>
-					<td>
-						<span
-							class="unicode"
-							id="youtube"
-							>
-						</span>
-						<a
-							href="https://youtube.com"
-						/>YouTube
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span
-							class="unicode"
-							id="github"
-							>
-						</span>
-						<a
-							href="https://github.com/lostinthestack"
-						/>GitHub
-					</td>
-					<td>
-						<span
-							class="unicode"
-							id="vectorstock"
-							>縉
-						</span>
-						<a
-							href="https://vectorstock.com"
-						/>VectorStock
-					</td>
-					<td>
-						<span
-							class="unicode"
-							id="protonmail"
-							>
-						</span>
-						<a
-							href="https://proton.me"
-						/>ProtonMail
-					</td>
-					<td>
-						<span
-							class="unicode"
-							id="reddit"
-							>
-						</span>
-						<a
-							href="https://reddit.com"
-						/>Reddit
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td>
-						<span
-							class="unicode"
-							id="discord"
-							>ﭮ
-						</span>
-						<a
-							href="https://discord.com/channels/@me"
-						/>Discord
-					</td>
-					<td></td>
-				</tr>
-			</table>
+						<span class="item"
+							><span
+								class="unicode orange1"
+								></span
+							>GitLab</span
+						>
+						<span class="item"
+							><span
+								class="unicode blue1"
+								></span
+							>GitHub</span
+						>
+					</div>
+					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Creativity</span
+						>
+						<span class="item"
+							><span
+								class="unicode green1"
+								>謁</span
+							>VectorStock</span
+						>
+						<span class="item"
+							><span
+								class="unicode yellow1"
+								></span
+							>WallHaven</span
+						>
+					</div>
+					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Communications</span
+						>
+						<span class="item"
+							><span
+								class="unicode red1"
+								></span
+							>GMail</span
+						>
+						<span class="item"
+							><span
+								class="unicode cyan1"
+								></span
+							>ProtonMail</span
+						>
+						<span class="item"
+							><span
+								class="unicode magenta1"
+								>ﭮ</span
+							>Discord</span
+						>
+					</div>
+					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Entertainment</span
+						>
+						<span class="item"
+							><span
+								class="unicode red1"
+								></span
+							>Reddit</span
+						>
+						<span class="item"
+							><span
+								class="unicode red1"
+								></span
+							>YouTube</span
+						>
+					</div>
+				</div>
+				<div
+					class="clock"
+					id="clock"
+					onload="currentTime()"
+				></div>
+			</div>
 		</div>
-		<footer>
-			<div
-				class="clock"
-				id="clock"
-				onload="currentTime()"
-			></div>
-		</footer>
 	</body>
 	<script type="text/javascript">
 		function currentTime() {
