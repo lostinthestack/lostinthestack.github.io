@@ -7,6 +7,7 @@
 	--bg2: #212f40;
 	--bg3: #2a3b50;
 	--fg: #cdcecf;
+	--transparent: #00000000;
 	--black1: #14141e;
 	--black2: #1d1d2b;
 	--black3: #212130;
@@ -55,100 +56,128 @@ body {
 	align-items: center;
 	width: 90vw;
 	height: 90vh;
+	font-size: 20px;
 }
 
-.box {
+.body {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: start;
 	align-items: center;
+	width: 90vw;
+	height: 90vh;
 	background-color: var(--black1);
-	color: var(--fg);
-	width: 100%;
-	height: 100%;
+	border: 0px solid #00000000;
+	border-radius: 36px;
+	box-shadow: 20px 20px 4px var(--bg);
 }
 
-.box2 {
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.row {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
-	background-color: var(--black2);
-	color: var(--fg);
-	width: 100%;
-	height: auto;
+	gap: 0.4em;
 }
 
-.box3 {
+.item {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: start;
 	align-items: center;
-	background-color: var(--black3);
-	color: var(--fg);
-	width: 90%;
-	height: 90%;
+	gap: 0.4em;
+	padding-left: 0.8em;
 }
 
 .col {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--black1);
-	color: var(--fg);
-	width: 100%;
-	height: 100%;
+	background-color: var(--bg);
+	border: 0px solid var(--transparent);
+	border-radius: 8px 8px 8px 8px;
+	line-height: 3em;
+}
+
+.header {
+	background-color: var(--bg2);
+	border: 0px solid var(--transparent);
+	border-radius: 8px 8px 0 0;
+	padding: 10px;
+	text-align: center;
+	line-height: 2em;
 }
 
 .clock {
+	background-color: var(--bg2);
+	color: var(--cyan1);
+	border: 0px solid var(--transparent);
+	border-radius: 8px;
+	padding: 0.6em;
 	text-align: center;
-	width: 100%;
+	font-weight: bold;
+	position: absolute;
+	bottom: 6%;
+	box-shadow: 10px 10px 3px var(--bg) inset;
+	text-shadow: 10px 10px 3px var(--black1);
 }
 
 footer {
-}
-
-.highlight {
-	color: var(--cyan1);
 }
 
 .unicode {
 	font-size: 3em;
 }
 
-#gitlab {
+.lost {
+	color: var(--magenta1);
+	text-shadow: 0px 0px 3px var(--cyan1);
+}
+
+.red1 {
+	color: var(--red1);
+}
+.red2 {
+	color: var(--red2);
+}
+.orange1 {
 	color: var(--orange1);
 }
-
-#github {
-	color: var(--magenta1);
+.orange2 {
+	color: var(--orange2);
 }
-
-#wallhaven {
+.yellow1 {
+	color: var(--yellow1);
+}
+.yellow2 {
 	color: var(--yellow2);
 }
-
-#vectorstock {
-	color: var(--yellow2);
-}
-
-#gmail {
+.green1 {
 	color: var(--green1);
 }
-
-#protonmail {
+.green2 {
+	color: var(--green2);
+}
+.cyan1 {
+	color: var(--cyan1);
+}
+.cyan2 {
+	color: var(--cyan2);
+}
+.blue1 {
+	color: var(--blue1);
+}
+.blue2 {
 	color: var(--blue2);
 }
-
-#discord {
+.magenta1 {
 	color: var(--magenta1);
 }
-
-#youtube {
-	color: var(--red2);
-}
-
-#reddit {
-	color: var(--red2);
+.magenta2 {
+	color: var(--magenta2);
 }
