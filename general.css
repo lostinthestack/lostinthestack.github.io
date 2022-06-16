@@ -107,15 +107,16 @@ body {
 
 .header {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: start;
 	align-items: center;
-	gap: 0.4em;
+	gap: 0em;
+	padding: 0.5em;
+	width: 8em;
+	height: 8em;
 	background-color: var(--bg2);
 	border: 0px solid var(--transparent);
-	border-radius: 8px 8px 0 0;
-	padding-left: 0em;
-	padding-right: 0em;
-	text-align: center;
+	border-radius: 8px;
 }
 
 .clock {
