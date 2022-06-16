@@ -19,29 +19,13 @@
 					<span class="lost">lost</span>?
 				</h2>
 				<div class="row">
-					<span class="header"
-						><span class="unicode cyan1"
-							></span
-						>Development</span
-					>
-					<span class="header"
-						><span class="unicode cyan1"
-							></span
-						>Creativity</span
-					>
-					<span class="header"
-						><span class="unicode cyan1"
-							></span
-						>Communications</span
-					>
-					<span class="header"
-						><span class="unicode cyan1"
-							></span
-						>Entertainment</span
-					>
-				</div>
-				<div class="row">
 					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Development</span
+						>
 						<span class="item"
 							><a
 								href="https://gitlab.com/lostinthestack"
@@ -60,8 +44,15 @@
 								></a
 							>GitHub</span
 						>
+						<span class="item"></span>
 					</div>
 					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Creativity</span
+						>
 						<span class="item"
 							><a
 								href="https://vectorstock.com"
@@ -80,8 +71,15 @@
 								></a
 							>WallHaven</span
 						>
+						<span class="item"></span>
 					</div>
 					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Communications</span
+						>
 						<span class="item"
 							><a
 								href="https://gmail.com"
@@ -111,6 +109,12 @@
 						>
 					</div>
 					<div class="col">
+						<span class="header"
+							><span
+								class="unicode cyan1"
+								></span
+							>Entertainment</span
+						>
 						<span class="item"
 							><a
 								href="https://reddit.com"
@@ -129,43 +133,10 @@
 								></a
 							>YouTube</span
 						>
+						<span class="item"></span>
 					</div>
 				</div>
-				<div
-					class="clock"
-					id="clock"
-					onload="currentTime()"
-				></div>
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript">
-		function currentTime() {
-			let date = new Date();
-			let hh = date.getHours();
-			let mm = date.getMinutes();
-			let ss = date.getSeconds();
-			let session = "AM";
-
-			if (hh == 0) {
-				hh = 12;
-			}
-			if (hh > 12) {
-				hh = hh - 12;
-				session = "PM";
-			}
-
-			hh = hh < 10 ? "0" + hh : hh;
-			mm = mm < 10 ? "0" + mm : mm;
-			ss = ss < 10 ? "0" + ss : ss;
-
-			let time = hh + ":" + mm + ":" + ss + " " + session;
-
-			document.getElementById("clock").innerText = time;
-			let t = setTimeout(function () {
-				currentTime();
-			}, 1000);
-		}
-		currentTime();
-	</script>
 </html>
